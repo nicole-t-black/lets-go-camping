@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #fcfcfc;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.navbar {
+    height: 60px;
+    background-color: #4B7211;
+    position: relative;
+}
+
+.logo {
+    color: #fef7e5;
+}
+
+.nav-elements ul {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+}
+
+.nav-elements ul li:not(:last-child) {
+    margin-right: 60px;
+}
+
+.nav-elements ul a {
+    font-size: 16px;
+    font-weight: 400;
+    color: #fef7e5;
+    text-decoration: none;
+}
+
+.nav-elements ul a.active {
+    color: #d6cca7;
+    font-weight: 500;
+    position: relative;
+}
+
+.nav-elements ul a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #d6cca7;
+}
+
+.menu-button {
+    color: transparent;
+    background-color: transparent;
+    border: none;
+}
+
+/* Media query for mobile devices */
+@media screen and (max-width: 768px) {
+    .logo {
+        font-size: 18px;
+    }
+
+    .mobile-menu {
+        display: block;
+        z-index: 20;
+    }
+
+    .nav-elements {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #4B7211;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .nav-elements.show-menu {
+        transform: translateX(0);
+        z-index: 20;
+    }
+
+    .nav-elements ul {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        height: 100%;
+    }
+
+    .nav-elements ul li:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+
+    .menu-button {
+        position: absolute;
+        top: 0;
+        right: 20px;
+        font-size: 24px;
+        color: #fef7e5;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        z-index: 25;
+        margin-top: 5px;
+    }
+}

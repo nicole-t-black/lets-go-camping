@@ -1,0 +1,15 @@
+.compare-suggest {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 40px;
+    font-family: sans-serif;
+    background-color: #fef7e5;
+    flex-direction: column;
+}
+
+@media only screen and (max-width: 600px) {
+    .compare-suggest {
+        flex-direction: column; /* Display items vertically */
+    }
+}

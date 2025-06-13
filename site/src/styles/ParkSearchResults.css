@@ -1,0 +1,44 @@
+.individual-park-container {
+    background-color: white;
+    padding:2rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 25px 300px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    color: #213A1B;
+}
+
+.park-image {
+    /*max-width: 15%;*/
+    width: 400px;
+    left: auto;
+}
+
+.park-important-details{
+    flex-grow: 1; /* Allows the details to take up the remaining space */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center align the content vertically */
+    padding-left: 500px;
+}
+
+.individual-park-container:hover {
+    background-color: #f0f0f0;
+    border-color: #aaa;
+    cursor: pointer;
+}
+
+
+/*.individual-park-container:hover .add-to-favorites {*/
+/*    display: block; !* Show button on hover *!*/
+/*}*/
+
+@media (max-width: 768px) {
+    .park-image {
+        display: flex;
+        justify-content: center;
+        max-width: 80%;
+    }
+
+}
+

@@ -1,0 +1,66 @@
+/*!* SearchBar.css *!*/
+.search-bar-button,
+.load-more-results {
+    margin-top: 15px;
+    cursor: pointer;
+    font-size: 15px;
+    background: #4B7211;
+    border: 1px solid #4B7211;
+    color: #fef7e5;
+    padding: 10px 20px;
+}
+
+.search-bar-button:hover,
+.load-more-results:hover{
+    background: #638f22;
+}
+
+.load-more-results{
+    display:block;
+    margin: 0 auto;
+}
+
+.search-input{
+    flex-direction: row;
+    border: 1px solid #4B7211;
+    padding: 10px 20px;
+
+}
+
+.search-container {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    margin: 10px;
+    justify-content: center;
+
+}
+
+.search-park-container {
+    position: relative;
+}
+
+@media (max-width: 600px) {
+    .search-container {
+        flex-direction: column;
+        align-items: center; /* Align items centrally in the vertical column */
+    }
+
+    .search-input,
+    .search-bar-button,
+    .load-more-results {
+        width: 100%; /* Make input and buttons span the full width */
+        margin-top: 5px; /* Reduce margin-top for a tighter design */
+    }
+
+    .search-bar-button,
+    .load-more-results {
+        padding: 8px 16px; /* Adjust padding for smaller screens */
+        font-size: 14px; /* Slightly reduce font size */
+    }
+
+    .search-input {
+        padding: 8px 16px; /* Adjust padding to be smaller */
+    }
+}
+

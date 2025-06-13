@@ -1,0 +1,15 @@
+.search-page {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 40px;
+    font-family: sans-serif;
+    background-color: #fef7e5;
+    flex-direction: column;
+}
+
+.search-page *:focus {
+    outline: 2px solid blue; /* Blue outline around the focused element */
+    background-color: #7fc2fd; /* Light blue background for additional emphasis */
+    box-shadow: 0 0 8px #00f; /* Soft blue glow for better visibility */
+}

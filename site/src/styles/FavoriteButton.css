@@ -1,0 +1,27 @@
+.favorites-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    cursor: pointer;
+    z-index: 15;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    font-size: 4em;
+}
+
+.individual-park-container:hover .favorites-button {
+    visibility: visible;
+    opacity: 1;
+}
+
+.favorites-button:hover,
+.favorites-button:focus {
+    opacity: 1;
+    outline: 2px solid blue; /* Blue outline around the focused element */
+    background-color: #7fc2fd; /* Light blue background for additional emphasis */
+    box-shadow: 0 0 8px #00f; /* Soft blue glow for better visibility */
+}
+

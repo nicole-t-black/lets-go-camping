@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+.login-page,
+.signup-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 40px;
+    font-family: 'Poppins', sans-serif;
+    background-color: #fef7e5;
+    flex-direction: row;
+    height: 100vh;
+}
+
+.logo {
+    max-width: 100%;
+    height: auto;
+}
+
+.single-input {
+    flex-direction: row;
+    padding-bottom: 15px;
+}
+
+.login-info,
+.signup-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    /*font-size: 16px;*/
+    font-weight: 400;
+}
+
+.login-form,
+.signup-form{
+    background-color: white;
+    padding: 2rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+input[type="text"],
+input[type="password"] {
+    height: 25px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    margin-left: 10px;
+    margin-bottom: 5px;
+}
+
+.login-button,
+.signup-button {
+    margin-top: 15px;
+    margin-left: 15px;
+    cursor: pointer;
+    font-size: 15px;
+    background: #4B7211;
+    border: 1px solid #4B7211;
+    color: #fef7e5;
+    padding: 10px 20px;
+}
+
+.login-button:hover,
+.signup-button:hover {
+    background: #638f22;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin: 10px;
+}
+.buttons {
+    flex-direction: row;
+}
+
+.error-message {
+    color: red;
+    font-size: 12px;
+    width: 340px;
+    white-space: normal;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.confirmation-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.confirmation-container {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.confirmation-message {
+    margin-bottom: 20px;
+}
+
+.confirmation-button {
+    margin-top: 15px;
+    cursor: pointer;
+    font-size: 15px;
+    background: #4B7211;
+    border: 1px solid #4B7211;
+    color: #fef7e5;
+    padding: 10px 20px;
+}
+
+.confirmation-button:hover {
+    background: #638f22;
+}
+
+@media only screen and (max-width: 600px) {
+    .login-page,
+    .signup-page {
+        flex-direction: column; /* Display items vertically */
+    }
+
+    .logo {
+        width: 50%; /* Adjust the width of the logo for smaller screens */
+    }
+
+    .single-input {
+        width: 100%; /* Take full width of the container */
+    }
+
+    .login-info,
+    .signup-info {
+        padding: 20px; /* Add some padding for better spacing */
+    }
+
+    .login-form,
+    .signup-form {
+        width: 90%; /* Reduce form width for smaller screens */
+    }
+
+    input[type="text"],
+    input[type="password"] {
+        width: 100%; /* Make input fields full width */
+    }
+
+    .buttons {
+        flex-direction: column; /* Display buttons vertically */
+    }
+
+}
