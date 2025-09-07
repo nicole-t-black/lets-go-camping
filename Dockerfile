@@ -1,24 +1,18 @@
-# Use a base image with JDK 17 already installed
-FROM eclipse-temurin:17-jdk
+# Use JDK 17 and Maven preinstalled
+FROM maven:3.9.6-eclipse-temurin-17 AS build
 
-# Set the working directory
 WORKDIR /app
 
-# Copy Maven wrapper and config first (better caching)
-COPY mvnw pom.xml ./
-COPY .mvn .mvn
+# Copy pom.xml and download dependencies first
+COPY pom.xml .
+RUN mvn dependency:go-offline
 
-# Make the wrapper executable
-RUN chmod +x mvnw
-
-# Download dependencies (caches them)
-RUN ./mvnw dependency:go-offline
-
-# Copy the project files
+# Copy source and build
 COPY src ./src
-
-# Build the app
-RUN ./mvnw clean package -DskipTests
+RUN mvn clean package -DskipTests
 
 # Run the app
-CMD ["java", "-jar", "target/*.jar"]
+FROM eclipse-temurin:17-jdk
+WORKDIR /app
+COPY --from=build /app/target/*.jar app.jar
+CMD ["java", "-jar", "app.jar"]
